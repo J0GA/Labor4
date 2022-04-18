@@ -189,3 +189,19 @@ else:
         move(B, C)
 while not C.is_empty():
     print(C.pop())
+
+print()
+print("Задание №4")
+def check_brackets(string):
+    bracket_stack = Stack()
+    for i in string:
+        if i == '(':
+            bracket_stack.push(i)
+        elif i == ')':
+            if bracket_stack.is_empty():
+                return False
+            bracket_stack.pop()
+    return bracket_stack.is_empty()
+
+print(check_brackets('(())()()'))
+print(check_brackets('(((()())()()()()))'))
