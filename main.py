@@ -272,3 +272,15 @@ while not deque.is_empty():
 while not deque.is_empty():
     print(deque.pop_left())
 
+print()
+print("Задание №8")
+with open('books.txt', 'r') as books:
+    books=open('books.txt','r', encoding='utf8')
+    stack = Stack()
+    for book in books:
+        book = book.strip()
+        print(book)
+        stack.push(book)
+    print()
+    while not stack.is_empty():
+        print(stack.pop())
