@@ -75,7 +75,7 @@ class Deque:
         self.size += 1
     def pop_left(self):  # удаляет и возвращает элемент с левой стороны двусторонней очереди
         if self.is_empty():
-            return print("Стек пустой!")
+            return print("Дек пустой!")
         remove = self.tail
         if self.size > 1:
             self.tail = remove.right
@@ -83,7 +83,7 @@ class Deque:
         return remove.value
     def pop(self):  # удаляет и возвращает элемент с правой стороны двусторонней очереди
         if self.is_empty():
-            return print("Стек пустой!")
+            return print("Дек пустой!")
         remove = self.head
         if self.size > 1:
             self.head = remove.left
@@ -91,11 +91,11 @@ class Deque:
         return remove.value
     def peek(self):  # возвращает элемент начала, не удаляя его
         if self.is_empty():
-            return print("Стек пустой!")
+            return print("Дек пустой!")
         return self.head.value
     def peek_left(self):  # возвращает элемент начала, не удаляя его
         if self.is_empty():
-            return print("Стек пустой!")
+            return print("Дек пустой!")
         return self.tail.value
     def __len__(self):  # возвращает количество элементов в двухсторонней очереди
         return self.size
